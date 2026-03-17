@@ -1,13 +1,14 @@
 import requests
 
 # ✅ 여기만 바꾸면 돼요!
-API_KEY = "여기에_Etherscan_API키_입력"
-TX_HASH = "여기에_친구에게_송금한_TX_Hash_입력"  # 나중에 친구 송금하고 채워넣기
+API_KEY = "ZNHNBZTI681MG2C8F745VKS9Z1P63HV68X"
+TX_HASH = "0x82b8c73a5056f92a49566fdf1df518f16b672399fc6e228bcbc1f5a91410d26e"
 
 # Sepolia Etherscan API
-url = "https://api-sepolia.etherscan.io/api"
+url = "https://api.etherscan.io/v2/api"
 
 params = {
+    "chainid": "11155111",
     "module": "proxy",
     "action": "eth_getTransactionByHash",
     "txhash": TX_HASH,
